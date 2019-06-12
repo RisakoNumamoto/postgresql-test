@@ -1,0 +1,20 @@
+<section id="classes" class="container">
+    <h1>All Classes</h1>
+
+    {{#each classes}}
+      <div class="gym">
+      <h3>{{className}}</h3>
+      <p>{{instructor}}</p>
+      <ul>
+        <li>Time: {{time}}</li>
+        <li><a href="mailto:{{time}}" class="btn btn-reverse">Delete Class</a></li>
+      </ul>
+      <div class="description">
+        <small>Class Description: <span>{{info}}</span></small>
+      </div>
+    </div>
+    {{else}}
+      <p>No classes available</p>
+    {{/each}}
+    
+  </section>

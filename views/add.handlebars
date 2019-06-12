@@ -1,0 +1,33 @@
+<section id="add" class="container">
+    <div class="form-wrap">
+      <h1>Add A Class</h1>
+      <p>The class will be accessible by all the gym members</p>
+      {{#each errors}}
+        <div class="error">
+          <p>{{text}}</p>
+        </div>
+      {{/each}}
+      <form action="/classes/add" method="POST">
+        <div class="input-group">
+          <label for="className">Class Name</label>
+          <input type="text" name="className" id="className" class="input-box" placeholder="eg. Yoga, Cyclying, Boxing"
+            maxlength="100" value={{className}}>
+        </div>
+        <div class="input-group">
+          <label for="instructor">Instructor Name</label>
+          <input type="text" name="instructor" id="instructor" class="input-box" placeholder="eg. John Smith"
+          maxlength="100" value={{instructor}}>
+        </div>
+        <div class="input-group">
+          <label for="time">Time </label>
+          <input type="text" name="time" id="time" class="input-box" placeholder="eg. MW 9:00-10:00" value={{time}}>
+        </div>
+        <div class="input-group">
+          <label for="info">Class Description</label>
+          <textarea name="info" id="info" class="input-box" placeholder="Describe the details of the class"
+            rows="10">{{info}}</textarea>
+        </div>
+        <input type="submit" value="Add Class" class="btn btn-reverse">
+      </form>
+    </div>
+  </section>
